@@ -70,6 +70,74 @@
       max-width: 100%;
       border-radius: 4px;
     }
+    /* Scientific Illustrations Carousel */
+    .carousel {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .carousel-track {
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .carousel-slide {
+      display: none;
+      text-align: center;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    .carousel-slide a img {
+      max-width: 100%;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+    }
+    .carousel-caption {
+      margin-top: 12px;
+      font-size: 0.95em;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      background: rgba(45, 122, 45, 0.85);
+      color: #fff;
+      border: none;
+      font-size: 1.4em;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .carousel-arrow:hover {
+      background: rgba(45, 122, 45, 1);
+    }
+    .carousel-arrow.prev {
+      left: -10px;
+    }
+    .carousel-arrow.next {
+      right: -10px;
+    }
+    .carousel-dots {
+      text-align: center;
+      margin-top: 14px;
+    }
+    .carousel-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+    .carousel-dot.active {
+      background: #2d7a2d;
+    }
   </style>
 </head>
 <body>
@@ -134,20 +202,45 @@
     </div>
 
     <div class="section">
-      <h2>Scientific Artwork</h2>
-      <div class="artwork">
-        <div class="art-item">
-          <img src="aging.jpg" alt="Artwork related to ageing" />
-          <p>
-            Campos, F. A., Wikberg, E. C., Orkin, J. D., Park, Y., Snyder-Mackler, N., Cheves Hernandez, S., ... & Melin, A. D. (2024). Wild capuchin monkeys as a model system for investigating the social and ecological determinants of ageing. <em>Philosophical Transactions B</em>, 379(1916), 20230482. <a href="https://royalsocietypublishing.org/doi/full/10.1098/rstb.2023.0482?casa_token=BINP712-ZEcAAAAA%3A0Tx2zUSiU0p9k-T4s2LeIEUJwuh6msLDPbX9BL51MeRsTZrFrC62HbEw1bcmkEoxuZTX6IfI9tZOkAg" target="_blank">[Link]</a>
-          </p>
+      <h2>Scientific Illustrations</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <a href="https://doi.org/10.64898/2026.09.08.750240" target="_blank">
+              <img src="akhtar.png" alt="Illustration for Akhtar et al." />
+            </a>
+            <p class="carousel-caption">
+              Genetic and behavioural repertoires support olfactory communication in wild capuchin monkeys. Akhtar, M. S., Kulick, N. K., Poirier, A. C., Hamou, H., Gal&aacute;n-Plana, C. F., Romero Morales, S., Cheves Hernandez, S., Benson, G. W., Chaves-Cordero, C., Hern&aacute;ndez-Rojas, R., Villero, V., Crofoot, M., Bergman, T., Orkin, J. D., Barrett, B. J., Tung, J., Jack, K. M., &amp; Melin, A. D. (2026).
+            </p>
+          </div>
+          <div class="carousel-slide">
+            <a href="https://doi.org/10.1111/mec.70468" target="_blank">
+              <img src="sadoughi.jpg" alt="Illustration for Sadoughi et al." />
+            </a>
+            <p class="carousel-caption">
+              Non-Invasive Measures of DNA Methylation Capture Molecular Aging in Wild Capuchin Monkeys. Sadoughi, B., Hern&aacute;ndez-Rojas, R., Hamou, H., Lopez, R., Mah, M., Slikas, E., Simmons, S. M. V., Orkin, J. D., Higham, J. P., Brosnan, S. F., et al. (2026). <em>Molecular Ecology</em>, 35(14), e70468.
+            </p>
+          </div>
+          <div class="carousel-slide">
+            <a href="https://royalsocietypublishing.org/doi/full/10.1098/rstb.2023.0482" target="_blank">
+              <img src="aging.jpg" alt="Artwork related to ageing" />
+            </a>
+            <p class="carousel-caption">
+              Wild capuchin monkeys as a model system for investigating the social and ecological determinants of ageing. Campos, F. A., Wikberg, E. C., Orkin, J. D., Park, Y., Snyder-Mackler, N., Cheves Hernandez, S., ... &amp; Melin, A. D. (2024). <em>Philosophical Transactions B</em>, 379(1916), 20230482.
+            </p>
+          </div>
+          <div class="carousel-slide">
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/evan.22030" target="_blank">
+              <img src="smell.jpg" alt="Artwork related to smell" />
+            </a>
+            <p class="carousel-caption">
+              Smell throughout the life course. Poirier, A. C., &amp; Melin, A. D. (2024). <em>Evolutionary Anthropology: Issues, News, and Reviews</em>, 33(4), e22030.
+            </p>
+          </div>
         </div>
-        <div class="art-item">
-          <img src="smell.jpg" alt="Artwork related to smell" />
-          <p>
-            Poirier, A. C., & Melin, A. D. (2024). Smell throughout the life course. <em>Evolutionary Anthropology: Issues, News, and Reviews</em>, 33(4), e22030. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/evan.22030" target="_blank">[Link]</a>
-          </p>
-        </div>
+        <button class="carousel-arrow prev" aria-label="Previous illustration">&#8249;</button>
+        <button class="carousel-arrow next" aria-label="Next illustration">&#8250;</button>
+        <div class="carousel-dots"></div>
       </div>
     </div>
 
@@ -160,5 +253,37 @@
       <p>CV: <a href="cv.html">View CV</a></p>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var track = document.querySelector('.carousel-track');
+      var slides = Array.prototype.slice.call(track.querySelectorAll('.carousel-slide'));
+      var dotsContainer = document.querySelector('.carousel-dots');
+      var current = 0;
+
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', function () { goTo(i); });
+        dotsContainer.appendChild(dot);
+      });
+      var dots = Array.prototype.slice.call(dotsContainer.querySelectorAll('.carousel-dot'));
+
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      document.querySelector('.carousel-arrow.prev').addEventListener('click', function () {
+        goTo(current - 1);
+      });
+      document.querySelector('.carousel-arrow.next').addEventListener('click', function () {
+        goTo(current + 1);
+      });
+    })();
+  </script>
 </body>
 </html>
