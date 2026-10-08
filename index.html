@@ -138,6 +138,59 @@
     .carousel-dot.active {
       background: #2d7a2d;
     }
+    /* Publications Grid */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .pub-card {
+      display: block;
+      background: #f4f6f1;
+      border: 1px solid #d8ddd1;
+      border-radius: 6px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pub-card:hover {
+      transform: scale(0.97);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      text-decoration: none;
+    }
+    .pub-badge {
+      display: inline-block;
+      font-size: 0.72em;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #2d7a2d;
+      background: rgba(45, 122, 45, 0.12);
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .pub-title {
+      font-size: 1.05em;
+      font-weight: bold;
+      color: #2d2d2d;
+      margin: 0 0 6px 0;
+      line-height: 1.35;
+    }
+    .pub-authors {
+      font-size: 0.85em;
+      color: #555;
+      margin: 0 0 10px 0;
+      line-height: 1.4;
+    }
+    .pub-abstract {
+      font-size: 0.85em;
+      color: #444;
+      line-height: 1.5;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -160,9 +213,6 @@
 
     <div class="section">
       <h2>Current Projects</h2>
-      <p style="text-align: center;">
-        <img src="senescence_poster.png" alt="RAI - Senescence at Face Value poster" style="max-width: 100%; border-radius: 4px;" />
-      </p>
       <div class="artwork">
         <div class="art-item">
           <img src="chimp_age.png" alt="Primate Aging Model" />
@@ -183,25 +233,32 @@
 
     <div class="section">
       <h2>Publications</h2>
-      <h3>Preprints &amp; Manuscripts Under Review</h3>
-      <ul>
-        <li>
-          <strong>Hoffman, J.</strong>, Gurven, M., Kaplan, H., Stieglitz, J., Trumble, B. C., Beheim, B., Hooper, P. L., Lee, R. B., Phelps, J. R., Hill, K., et al. (2026). Evaluating performance bias in face-to-BMI vision transformer models across diverse human populations. <em>bioRxiv</em> (Preprint under review). <a href="https://doi.org/10.64898/2026.09.02.748815" target="_blank">[Link]</a>
-        </li>
-      </ul>
-
-      <h3>Peer-Reviewed Journal Articles</h3>
-      <ul>
-        <li>
-          Venkataraman, V. V., Hagen, E. H., Stibbard-Hawkes, D., Hames, R., Lew-Levy, S., Jang, H., Glowacki, L., <strong>Hoffman, J.</strong>, Kramer, K., Davis, H. E., Starkweather, K., Hewlett, B., Garfield, Z. H., & Kelly, R. L. (2026). The meanings and dividends of man the hunter. <em>Evolution and Human Behavior</em>, 47(3), 106840. <a href="https://doi.org/10.1016/j.evolhumbehav.2026.106840" target="_blank">[Link]</a>
-        </li>
-        <li>
-          Venkataraman, V. V., <strong>Hoffman, J.</strong>, Farquharson, K., Davis, H. E., Hagen, E. H., Hames, R. B., Hewlett, B. S., Glowacki, L., Jang, H., Kelly, R., Kramer, K., Lew-Levy, S., Starkweather, K., Syme, K., & Stibbard-Hawkes, D. N. E. (2024). Female foragers sometimes hunt, yet gendered divisions of labor are real: A comment on Anderson et al. (2023) The Myth of Man the Hunter. <em>Evolution and Human Behavior</em>, 45(4), 106586. <a href="https://doi.org/10.1016/j.evolhumbehav.2024.04.014" target="_blank">[Link]</a>
-        </li>
-        <li>
-          <strong>Hoffman, J.</strong>, Farquharson, K., & Venkataraman, V. V. (2021). The ecological and social context of women's hunting in small-scale societies. <em>Hunter Gatherer Research</em>, 7(1-2), 1-31. <a href="https://doi.org/10.3828/hgr.2023.8" target="_blank">[Link]</a>
-        </li>
-      </ul>
+      <div class="pub-grid">
+        <a class="pub-card" href="https://doi.org/10.64898/2026.09.02.748815" target="_blank">
+          <span class="pub-badge">bioRxiv &middot; Preprint</span>
+          <p class="pub-title">Evaluating performance bias in face-to-BMI vision transformer models across diverse human populations</p>
+          <p class="pub-authors"><strong>Hoffman, J.</strong>, Gurven, M., Kaplan, H., Stieglitz, J., Trumble, B. C., Beheim, B., Hooper, P. L., Lee, R. B., Phelps, J. R., Hill, K., et al. (2026)</p>
+          <p class="pub-abstract">Computer vision models that estimate body mass index (BMI) from photographs offer a promising, non-invasive, and low-cost tool for telemedicine, emergency care, and large-scale global health research. However, the majority of published models rely on a limited number of training datasets, all drawn from urbanized, market-integrated populations with measurements that are self-reported, or estimated. While limited studies highlight risks for ethnic bias in current facial analysis models, it remains unknown whether face-to-BMI models fail to generalize across diverse global populations. To test for this, we trained a Vision Transformer model using paired photographs and BMI measurements collected by anthropologists in four morphologically and geographically distinct Indigenous populations. We found that these models are most accurate when trained on the same populations they will be assessing. When that specific data is unavailable, training on a broad cross-cultural dataset can provide a strong alternative. Our findings indicate that diverse training datasets are essential for developing accurate face-to-BMI models.</p>
+        </a>
+        <a class="pub-card" href="https://doi.org/10.1016/j.evolhumbehav.2026.106840" target="_blank">
+          <span class="pub-badge">Evolution and Human Behavior &middot; 2026</span>
+          <p class="pub-title">The meanings and dividends of man the hunter</p>
+          <p class="pub-authors">Venkataraman, V. V., Hagen, E. H., Stibbard-Hawkes, D., Hames, R., Lew-Levy, S., Jang, H., Glowacki, L., <strong>Hoffman, J.</strong>, Kramer, K., Davis, H. E., Starkweather, K., Hewlett, B., Garfield, Z. H., &amp; Kelly, R. L. (2026)</p>
+          <p class="pub-abstract">The phrase Man the Hunter is associated with disparate meanings across communities of scholars, journalists, and the public, which has led to unnecessary scientific disagreement and popular misunderstanding. In this paper, we ask: what does Man the Hunter mean? We distinguish three historical meanings of Man the Hunter. First, in the early-to-mid 20th century, popular writers propagated ideas of human evolution that focused on hunting, men, aggression, rigid sexual divisions of labor, and immutable sex differences. These ideas gained widespread acceptance in popular circles and continue to be influential, but were rejected by anthropologists as early as the 1950s. Second, the Man the Hunter conference (1966) and resulting volume (1968) brought together hunter-gatherer scholars to synthesize how contemporary hunter-gatherers inform human prehistory. Third, Man the Hunter has referred to the field of hunter-gatherer behavioral ecology that studies how human behavior has adapted to local environmental contexts, and has offered a critical foundation for present-day knowledge about hunting and gathering lifeways and human origins, which we summarize. In the final section of the paper, we trace the historical development of these three meanings of Man the Hunter, situating their origins in evolutionary biology, ethnology, feminist studies, ethology, genetics, and other disciplines. While the latter two meanings were strongly intertwined, there was little intellectual exchange, and mostly antagonism, between these two and the earlier but still influential popularized meaning. Based on these disparate histories, conflating the three meanings of Man the Hunter should be avoided. We offer suggestions for improving scientific and popular discourse regarding Man the Hunter.</p>
+        </a>
+        <a class="pub-card" href="https://doi.org/10.1016/j.evolhumbehav.2024.04.014" target="_blank">
+          <span class="pub-badge">Evolution and Human Behavior &middot; 2024</span>
+          <p class="pub-title">Female foragers sometimes hunt, yet gendered divisions of labor are real: A comment on Anderson et al. (2023) The Myth of Man the Hunter</p>
+          <p class="pub-authors">Venkataraman, V. V., <strong>Hoffman, J.</strong>, Farquharson, K., Davis, H. E., Hagen, E. H., Hames, R. B., Hewlett, B. S., Glowacki, L., Jang, H., Kelly, R., Kramer, K., Lew-Levy, S., Starkweather, K., Syme, K., &amp; Stibbard-Hawkes, D. N. E. (2024)</p>
+          <p class="pub-abstract">Gendered divisions of labor are a feature of every known contemporary hunter-gatherer (forager) society. While gender roles are certainly flexible, and prominent and well-studied cases of female hunting do exist, it is more often men who hunt. A new study (Anderson et al., 2023) surveyed ethnographically known foragers and found that women hunt in 79% of foraging societies, with big-game hunting occurring in 33%. Based on this single type of labor, which is one among dozens performed in foraging societies, the authors question the existence of gendered division of labor altogether. As a diverse group of hunter-gatherer experts, we find that claims that foraging societies lack or have weak gendered divisions of labor are contradicted by empirical evidence. We conducted an in-depth examination of the data and methods of Anderson et al. (2023), finding evidence of sample selection bias and numerous coding errors undermining the paper's conclusions. Anderson et al. (2023) have started a useful dialogue to ameliorate the potential misconception that women never hunt. However, their analysis does not contradict the wide body of empirical evidence for gendered divisions of labor in foraging societies. Furthermore, a myopic focus on hunting diminishes the value of contributions that take different forms and downplays the trade-offs foragers of both sexes routinely face. We caution against ethnographic revisionism that projects Westernized conceptions of labor and its value onto foraging societies.</p>
+        </a>
+        <a class="pub-card" href="https://doi.org/10.3828/hgr.2023.8" target="_blank">
+          <span class="pub-badge">Hunter Gatherer Research &middot; 2021</span>
+          <p class="pub-title">The ecological and social context of women's hunting in small-scale societies</p>
+          <p class="pub-authors"><strong>Hoffman, J.</strong>, Farquharson, K., &amp; Venkataraman, V. V. (2021)</p>
+          <p class="pub-abstract">Women participate in hunting in some foraging societies but not in others. To examine the socioecological factors that are conducive to women's hunting, we conducted an ethnographic survey using the Human Relations Area Files and other selected sources authored in the past 200 years. Based on life history theory and behavioural ecology, we predicted that women should engage in hunting when: i) it poses few conflicts with childcare, ii) it is associated with few cultural restrictions around the use of hunting technology, iii) it involves low-risk game within range of camp, with the aid of dogs, and/or in groups, and, iv) women fulfil key logistical or informational roles. We systematically reviewed ethnographic documents across 64 societies and coded 242 paragraphs for the above variables. The data largely support theoretical expectations. When women hunted, they did so in a fundamentally different manner than men, focusing on smaller game and hunting in larger groups near camp, often with the aid of dogs. There was little evidence to suggest that women only participated in hunting during non-reproductive years; instead, allocare networks were a prominent strategy for mitigating trade-offs between hunting and childcare responsibilities. Women commonly fulfilled crucial informational, logistical and ritualistic roles. Cultural restrictions limited women's participation in hunting, but not to the extent commonly assumed. These data offer a cross-cultural framework for making inferences about whether and how women's hunting occurred in the past.</p>
+        </a>
+      </div>
     </div>
 
     <div class="section">
