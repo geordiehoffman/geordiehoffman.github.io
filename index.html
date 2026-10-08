@@ -49,11 +49,26 @@
     a:hover {
       text-decoration: underline;
     }
-    .contact-links img {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-      margin-right: 8px;
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 16px;
+    }
+    .contact-icons a {
+      display: block;
+      line-height: 0;
+    }
+    .contact-icons img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      transition: transform 0.15s ease;
+    }
+    .contact-icons a:hover img {
+      transform: scale(1.12);
     }
     /* Scientific Artwork Section Styles */
     .artwork {
@@ -311,11 +326,13 @@
 
     <div class="section">
       <h2>Contact</h2>
-      <p><a href="mailto:u1531037@utah.edu">u1531037@utah.edu</a></p>
-      <p><a href="https://github.com/geordiehoffman">GitHub</a></p>
-      <p><a href="https://bsky.app/profile/lcdrgeordi.bsky.social">Bluesky</a></p>
-      <p><a href="https://scholar.google.com/citations?hl=en&user=knYGhlAAAAAJ">Google Scholar</a></p>
-      <p><a href="cv.html">View CV</a></p>
+      <div class="contact-icons">
+        <a href="mailto:u1531037@utah.edu" title="Email"><img src="logos/outlook.png" alt="Email" /></a>
+        <a href="https://github.com/geordiehoffman" target="_blank" title="GitHub"><img src="logos/github.png" alt="GitHub" /></a>
+        <a href="https://bsky.app/profile/lcdrgeordi.bsky.social" target="_blank" title="Bluesky"><img src="logos/Bluesky.png" alt="Bluesky" /></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=knYGhlAAAAAJ" target="_blank" title="Google Scholar"><img src="logos/googlescholar.png" alt="Google Scholar" /></a>
+        <a href="cv.html" title="View CV"><img src="logos/CV.svg" alt="View CV" /></a>
+      </div>
     </div>
   </div>
 
