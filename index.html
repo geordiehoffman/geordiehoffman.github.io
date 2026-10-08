@@ -191,12 +191,19 @@
       line-height: 1.5;
       margin: 0;
     }
-    .pub-thumb {
+    .pub-card-image {
+      padding: 0;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .pub-card-image .pub-thumb {
       width: 100%;
-      border: 1px solid #d8ddd1;
-      border-radius: 3px;
-      margin-bottom: 12px;
+      height: 100%;
+      object-fit: cover;
       display: block;
+      margin: 0;
+      border: none;
+      border-radius: 0;
     }
   </style>
 </head>
@@ -247,23 +254,14 @@
           <p class="pub-authors"><strong>Hoffman, J.</strong>, Gurven, M., Kaplan, H., Stieglitz, J., Trumble, B. C., Beheim, B., Hooper, P. L., Lee, R. B., Phelps, J. R., Hill, K., et al. (2026)</p>
           <p class="pub-abstract">Computer vision models that estimate body mass index (BMI) from photographs offer a promising, non-invasive, and low-cost tool for telemedicine, emergency care, and large-scale global health research. However, the majority of published models rely on a limited number of training datasets, all drawn from urbanized, market-integrated populations with measurements that are self-reported, or estimated. While limited studies highlight risks for ethnic bias in current facial analysis models, it remains unknown whether face-to-BMI models fail to generalize across diverse global populations. To test for this, we trained a Vision Transformer model using paired photographs and BMI measurements collected by anthropologists in four morphologically and geographically distinct Indigenous populations. We found that these models are most accurate when trained on the same populations they will be assessing. When that specific data is unavailable, training on a broad cross-cultural dataset can provide a strong alternative. Our findings indicate that diverse training datasets are essential for developing accurate face-to-BMI models.</p>
         </a>
-        <a class="pub-card" href="https://doi.org/10.1016/j.evolhumbehav.2026.106840" target="_blank">
-          <span class="pub-badge">Evolution and Human Behavior &middot; 2026</span>
-          <p class="pub-title">The meanings and dividends of man the hunter</p>
-          <p class="pub-authors">Venkataraman, V. V., Hagen, E. H., Stibbard-Hawkes, D., Hames, R., Lew-Levy, S., Jang, H., Glowacki, L., <strong>Hoffman, J.</strong>, Kramer, K., Davis, H. E., Starkweather, K., Hewlett, B., Garfield, Z. H., &amp; Kelly, R. L. (2026)</p>
-          <img class="pub-thumb" src="pub_manhunter_2026.png" alt="First page of The meanings and dividends of man the hunter" />
+        <a class="pub-card pub-card-image" href="https://doi.org/10.1016/j.evolhumbehav.2026.106840" target="_blank">
+          <img class="pub-thumb" src="pub_manhunter_2026.png" alt="The meanings and dividends of man the hunter" />
         </a>
-        <a class="pub-card" href="https://doi.org/10.1016/j.evolhumbehav.2024.04.014" target="_blank">
-          <span class="pub-badge">Evolution and Human Behavior &middot; 2024</span>
-          <p class="pub-title">Female foragers sometimes hunt, yet gendered divisions of labor are real: A comment on Anderson et al. (2023) The Myth of Man the Hunter</p>
-          <p class="pub-authors">Venkataraman, V. V., <strong>Hoffman, J.</strong>, Farquharson, K., Davis, H. E., Hagen, E. H., Hames, R. B., Hewlett, B. S., Glowacki, L., Jang, H., Kelly, R., Kramer, K., Lew-Levy, S., Starkweather, K., Syme, K., &amp; Stibbard-Hawkes, D. N. E. (2024)</p>
-          <img class="pub-thumb" src="pub_comment_2024.png" alt="First page of Female foragers sometimes hunt, yet gendered divisions of labor are real" />
+        <a class="pub-card pub-card-image" href="https://doi.org/10.1016/j.evolhumbehav.2024.04.014" target="_blank">
+          <img class="pub-thumb" src="pub_comment_2024.png" alt="Female foragers sometimes hunt, yet gendered divisions of labor are real" />
         </a>
-        <a class="pub-card" href="https://doi.org/10.3828/hgr.2023.8" target="_blank">
-          <span class="pub-badge">Hunter Gatherer Research &middot; 2021</span>
-          <p class="pub-title">The ecological and social context of women's hunting in small-scale societies</p>
-          <p class="pub-authors"><strong>Hoffman, J.</strong>, Farquharson, K., &amp; Venkataraman, V. V. (2021)</p>
-          <img class="pub-thumb" src="pub_womenshunting_2021.png" alt="First page of The ecological and social context of women's hunting in small-scale societies" />
+        <a class="pub-card pub-card-image" href="https://doi.org/10.3828/hgr.2023.8" target="_blank">
+          <img class="pub-thumb" src="pub_womenshunting_2021.png" alt="The ecological and social context of women's hunting in small-scale societies" />
         </a>
       </div>
     </div>
